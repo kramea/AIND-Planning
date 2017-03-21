@@ -1,0 +1,24 @@
+
+\documentclass[12pt]{article}
+
+\title{Research Review: Vossen et al. (1999) On the Use of Integer Programming Models in AI Planning}
+\author{Kalai Ramea}
+
+
+\begin{document}
+\maketitle
+
+Operations Research (OR) and AI have similar application areas such as planning, scheduling and so on. While the former concentrates on formulation of problems through numerical constraints, AI devises the problem formulation through a more human-like decision making. However, the possibility of using OR in AI problems is not widely studied. This paper by Vossen et al. explores the interface between Integer programming (IP) and AI in a planning problem (specifically comparing to propositional reasoning approaches), and analyzes the pros and cons of both methods. 
+
+One of the main advantages of OR approach is that, numerical constraints can be given to the problem along with an objective function, such as minimize the total system cost, or minimize the number of searches in the graph. This kind of formulation is not adequately addressed in AI, but these outcomes can be critical in real-world problems. 
+
+In this paper, alternative formulations using integer programming are suggested for SATPLAN encodings. In SATPLAN, the problem of determining whether a plan exists, given a fixed number of time steps, is expressed as a satisfiability problem. As the first step, the encodings are converted to numerical constraints, such as, initial and goal state constraints, precondition constraints, exclusiveness constraints and backward chaining constraints. Then, the objective function was set to minimize the number of actions in the plan. Theoretically this function could be set to anything, as the constraints are sufficient to give a feasible search space. But, choice of the objective function could impact the performance of the problem, so, it should be carefully chosen. 
+
+An improvement from this formulation is also suggested known as state-change formulation. Here, the original fluent variables are compiled away and suitably defined state change variables are introduced instead. This results in a stronger representation of exclusion constraints. 
+
+The tests were ran for both AI propositional logic approach and the interfaced integer programming, and improved state change formulation approaches. It is observed that state change formulation approach showed significant improvement in performance, requiring fewer nodes and less computation time. Also, the size of the formulation was significantly reduced due to integer programming.
+
+This paper shows that IP formulations could potentially benefit AI problems in many application areas. Firstly, it leads to representation of efficient planning, and secondly, it gives an opportunity to incorporate numerical constraints and objective function in the problem. However, this could lead to some unwanted effects of linear programming, such as, degeneracy, which cause the solver to execute many non-productive iterations. But, this area of research has a lot of potential to be explored.
+
+
+\end{document}
